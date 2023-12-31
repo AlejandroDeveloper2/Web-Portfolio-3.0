@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "types":["vitest/globals"],
+    "baseUrl": "./src",
+    "paths": {
+      "@components/*":["./components/*"], 
+      "@hooks/*":["./hooks/*"],
+      "@assets/*":["./assets/*"],
+      "@utils/*":["./utils/*"],
+      "@services/*":["./services/*"],
+      "@styles/*":["./styles/*"],
+      "@models/*":["./models/*"],
+      "@pages/*":["./pages/*"],
+      "@redux/*":["./redux/*"],
+      "@context/*":["./context/*"],
+      "@config/*":["./config/*"],
+      "@routes/*":["./routes/*"],
+      "@layout/*":["./layout/*"],
+      "@lang/*":["./lang/*"],
+      "@mocks/*":["./mocks/*"],
+    },
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

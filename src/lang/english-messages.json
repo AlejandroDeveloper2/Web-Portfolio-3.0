@@ -1,0 +1,15 @@
+{
+  "nav.homeLabel": "Home",
+  "nav.aboutLabel": "About me",
+  "nav.myProjectsLabel": "My Projects",
+  "nav.contactLabel": "Contact me",
+  "app.versionLabel": "Version",
+  "home.presentationName": "{ Hello I'm Diego Alejandro Diaz Bonilla }",
+  "home.presentationPart1": "Ui - Ux designer",
+  "home.presentationPart2": " and web and mobile",
+  "home.presentationPart3": " Front - end developer",
+  "about.title": "Let’s know a little more about me",
+  "about.profile-1": "I’m a front-end developer and an UI/UX design lover. For front-end development I have experience developing personal, academic projects and projects as a freelancer in certain technologies such as React + TypeScript, React native and much more. For UI design I have experience with Figma tool.",
+  "about.profile-2": "Finally, to describe myself I’m a self-learner and I like learning new things every day to keep growing both personally and professionally as well as to keep up with new emerging technologies.",
+  "about.subtitle": "About me"
+}
