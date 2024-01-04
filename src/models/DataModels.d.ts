@@ -1,5 +1,6 @@
 import { IconType } from "react-icons";
 import { ButtonStyleProps } from "./StyledComponentsModels";
+import { StudyCardProps } from "./ComponentsModels";
 
 type LanguageTag = "es-MX" | "en-US";
 
@@ -26,4 +27,22 @@ interface MediaLink {
   Icon: IconType;
 }
 
-export type { LanguageTag, MenuItem, SkillInfo, MediaLink };
+interface StudiesInfo extends StudyCardProps {}
+
+interface CarouselConfig {
+  shownSlidesNumber: {
+    desktop: number;
+    tablet: number;
+    mobile: number;
+  };
+  slides: T[];
+}
+
+export type {
+  LanguageTag,
+  MenuItem,
+  SkillInfo,
+  MediaLink,
+  StudiesInfo,
+  CarouselConfig,
+};

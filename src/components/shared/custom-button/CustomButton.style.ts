@@ -40,6 +40,7 @@ const ExternalLink = styled.a<ButtonStyleProps>`
   svg {
     transition: transform ease 0.5s;
   }
+  text-decoration: none;
 
   &:hover {
     opacity: 0.7;

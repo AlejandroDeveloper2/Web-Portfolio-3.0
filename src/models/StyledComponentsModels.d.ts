@@ -40,6 +40,10 @@ interface ActiveBgStyle {
 
 interface MediaLinksStyleProps extends LateralMenuStyleProps {}
 
+interface CarouselIndicatorStyleProps extends BackgroundStyledProps {
+  active: boolean;
+}
+
 export type {
   Theme,
   ScreenMode,
@@ -52,4 +56,5 @@ export type {
   ThemeControlsStyleProps,
   ActiveBgStyle,
   MediaLinksStyleProps,
+  CarouselIndicatorStyleProps,
 };

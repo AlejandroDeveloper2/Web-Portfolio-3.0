@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 import { MenuItem, SkillInfo } from "./DataModels";
 import { ButtonStyleProps, ButtonStyleVariant } from "./StyledComponentsModels";
 
@@ -61,6 +63,19 @@ interface BadgeProps {
   };
 }
 
+interface StudyCardProps {
+  degreeTitle: string;
+  timeSpan: string;
+  status: "ended" | "studying";
+  degreeImageUrl: string;
+}
+
+interface CarouselProps {
+  children: ReactNode[] | ReactNode;
+  indicatorsNumber: number;
+  next: () => void;
+}
+
 export type {
   LogoProps,
   BaseButtonProps,
@@ -73,4 +88,6 @@ export type {
   SkillListProps,
   ExperienceInfoProps,
   BadgeProps,
+  StudyCardProps,
+  CarouselProps,
 };

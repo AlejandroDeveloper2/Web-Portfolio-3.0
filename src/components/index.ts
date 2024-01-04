@@ -13,6 +13,7 @@ export { default as SkillList } from "@components/shared/skills-section/SkillLis
 export { default as MediaLinks } from "@components/shared/media-links/MediaLinks";
 export { default as ParticlesBg } from "@components/shared/particles-bg/ParticlesBg";
 export { default as Badge } from "@components/shared/badge/Badge";
+export { default as Carousel } from "@components/shared/carousel/Carousel";
 
 /*home */
 export { default as Presentation } from "@components/home/presentation/Presentation";
@@ -24,3 +25,5 @@ export { default as Profile } from "@components/about/profile/Profile";
 export { default as ProffesionalInfo } from "@components/about/proffesional-info/ProffesionalInfo";
 export { default as Experience } from "@components/about/experience/Experience";
 export { default as ExperienceInfo } from "@components/about/experience-info/ExperienceInfo";
+export { default as Studies } from "@components/about/studies/Studies";
+export { default as StudyCard } from "@components/about/study-card/StudyCard";

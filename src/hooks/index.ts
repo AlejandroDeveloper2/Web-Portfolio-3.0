@@ -9,3 +9,4 @@ export { default as useMediaLinks } from "@hooks/app-hooks/useMediaLinks";
 export { default as useScreenSize } from "@hooks/app-hooks/useScreenSize";
 export { default as useStickyNavigation } from "@hooks/app-hooks/useStickyNavigation";
 export { default as useIntersectionObserver } from "@hooks/app-hooks/useIntersectionObserver";
+export { default as useCarousel } from "@hooks/app-hooks/useCarousel";
