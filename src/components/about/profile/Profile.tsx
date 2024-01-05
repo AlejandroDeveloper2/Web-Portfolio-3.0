@@ -1,6 +1,6 @@
 import { FormattedMessage } from "react-intl";
 
-import { useThemeContext } from "@hooks/index";
+import { useLanguageContext, useThemeContext } from "@hooks/index";
 import { featuredSkills } from "@mocks/skills.data";
 
 import {
@@ -16,6 +16,7 @@ import { ProfileContainer, ProfileRow } from "./Profile.style";
 
 const Profile = (): JSX.Element => {
   const { colorPattle } = useThemeContext();
+  const { language } = useLanguageContext();
 
   return (
     <ProfileContainer>
@@ -32,7 +33,14 @@ const Profile = (): JSX.Element => {
       <ProfileRow>
         <ProffesionalInfo />
         <SkillsSection>
-          <SkillList listTitle="My tech skills" skillGroup={featuredSkills} />
+          <SkillList
+            listTitle={
+              language === "en-US"
+                ? "My technical skills"
+                : "Mis habilidades técnicas"
+            }
+            skillGroup={featuredSkills}
+          />
         </SkillsSection>
       </ProfileRow>
       <Experience />

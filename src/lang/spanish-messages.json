@@ -11,5 +11,13 @@
   "about.title": "Conozcamos un poco mas de mi",
   "about.profile-1": "Soy un desarrollador front-end y un amante del diseño UI/UX. Para el desarrollo front-end tengo experiencia desarrollando proyectos personales, academicos y como freelancer en ciertas tecnologias como React + TypeScript, React native y muchas mas. Para el Diseño UI/UX tengo experiencia con la herramienta de Figma.",
   "about.profile-2": "Finalmente, para describirme soy autodidacta y me gusta aprender cosas nuevas cada dia para seguir creciendo tanto personal como profesionalmente asi como tambien para mantenerme al dia con las nuevas tecnologias emergentes.",
-  "about.subtitle": "Acerca de mi"
+  "about.subtitle": "Acerca de mi",
+  "about.skillSubtitle": "Mis habilidades técnicas",
+  "about.experienceSubtitle": "Mi experiencia",
+  "about.experienceOneTitle": "Desarrollador front - end",
+  "about.experienceTwoTitle": "Desarrollador front - end y diseñador UI/UX",
+  "about.experienceOneDescription": "Trabajé en este proyecto como desarrollador Frontend freelance para clientes individuales durante 6 meses en 2023. Colaboré con un equipo de trabajo que estaba compuesto por 3 personas: propietario del producto, desarrollador de Backend y yo. Se trataba de una aplicación de juego de bingo electrónico.",
+  "about.experienceTwoDescription": "Desarrollé este proyecto como estudiante de ingeniería de software para obtener mi título en ingeniería, el desarrollo del proyecto duró 6 meses. Colaboré con un equipo de desarrollo que estaba compuesto por 4 personas, dos directores de proyecto y dos desarrolladores. Se trataba de una aplicación móvil para el sistema Android para facilitar la gestión de los costos y gastos de producción de los cultivos de café para los caficultores en la ciudad de Rosas Cauca, Colombia.",
+  "about.studiesTitle": "Mis estudios y cursos",
+  "about.certificateButtonLabel": "Ver Certificado"
 }

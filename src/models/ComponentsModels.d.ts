@@ -52,7 +52,7 @@ interface ExperienceInfoProps {
   description: string;
   timeDuration: string;
   jobPosition: string;
-  state: "ended" | "working";
+  state: "ended" | "working" | "finalizado" | "trabajando";
 }
 
 interface BadgeProps {
@@ -66,7 +66,7 @@ interface BadgeProps {
 interface StudyCardProps {
   degreeTitle: string;
   timeSpan: string;
-  status: "ended" | "studying";
+  status: "ended" | "studying" | "finalizado" | "estudiando";
   degreeImageUrl: string;
 }
 

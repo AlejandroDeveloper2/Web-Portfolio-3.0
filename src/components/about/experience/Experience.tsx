@@ -1,6 +1,9 @@
+import { FormattedMessage } from "react-intl";
 import { MdWork } from "react-icons/md";
 
-import { useThemeContext } from "@hooks/index";
+import { useThemeContext, useLanguageContext } from "@hooks/index";
+import EnglishMessages from "@lang/english-messages.json";
+import SpanishMessages from "@lang/spanish-messages.json";
 
 import { ExperienceInfo } from "@components/index";
 
@@ -13,6 +16,8 @@ import { TextSubtitle } from "@styles/GlobalStyles.style";
 
 const Experience = (): JSX.Element => {
   const { colorPattle } = useThemeContext();
+  const { language } = useLanguageContext();
+
   return (
     <ExperienceContainer>
       <ArticleTitle>
@@ -22,21 +27,40 @@ const Experience = (): JSX.Element => {
           weight="bold"
           align="center"
         >
-          My Experience
+          <FormattedMessage
+            id="about.experienceSubtitle"
+            defaultMessage="My experience"
+          />
         </TextSubtitle>
       </ArticleTitle>
       <ExperienceArticle bg={colorPattle.primaryColor}>
         <ExperienceInfo
-          jobPosition="Front - end developer"
-          description="I worked in this project as a freelancer front-end developer for individual clients during 6 months in 2023. I collaborated with a working team that was composed of 3 persons a product owner, backend developer and me. It was about an electronic bingo game application."
-          timeDuration=" 6 months"
-          state="ended"
+          jobPosition={
+            language === "en-US"
+              ? EnglishMessages["about.experienceOneTitle"]
+              : SpanishMessages["about.experienceOneTitle"]
+          }
+          description={
+            language === "en-US"
+              ? EnglishMessages["about.experienceOneDescription"]
+              : SpanishMessages["about.experienceOneDescription"]
+          }
+          timeDuration={language === "en-US" ? "6 months" : "6 meses"}
+          state={language === "en-US" ? "ended" : "finalizado"}
         />
         <ExperienceInfo
-          jobPosition="Front - end developer and UI/UX designer"
-          description="I developed this project as a software engineer student for getting my degree in engineering. This project lasted 6 months. I collaborated with a development team that was composed of 4 persons two project directors, and two developers. It was about a mobile app for android system to make easier the production’s costs and expenses management of coffee crops for coffee growers in Rosas Cauca Colombia town."
-          timeDuration=" 6 months"
-          state="ended"
+          jobPosition={
+            language === "en-US"
+              ? EnglishMessages["about.experienceTwoTitle"]
+              : SpanishMessages["about.experienceTwoTitle"]
+          }
+          description={
+            language === "en-US"
+              ? EnglishMessages["about.experienceTwoDescription"]
+              : SpanishMessages["about.experienceTwoDescription"]
+          }
+          timeDuration={language === "en-US" ? "6 months" : "6 meses"}
+          state={language === "en-US" ? "ended" : "finalizado"}
         />
       </ExperienceArticle>
     </ExperienceContainer>

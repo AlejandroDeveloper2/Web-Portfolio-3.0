@@ -1,8 +1,13 @@
+import { FormattedMessage } from "react-intl";
 import { GiGraduateCap } from "react-icons/gi";
 import { GrView } from "react-icons/gr";
 
 import { StudyCardProps } from "@models/ComponentsModels";
-import { useScreenSize, useThemeContext } from "@hooks/index";
+import {
+  useLanguageContext,
+  useScreenSize,
+  useThemeContext,
+} from "@hooks/index";
 
 import { Badge, BaseExternalLink } from "@components/index";
 
@@ -11,6 +16,7 @@ import { Text, TextCaption } from "@styles/GlobalStyles.style";
 
 const StudyCard = (props: StudyCardProps): JSX.Element => {
   const { colorPattle } = useThemeContext();
+  const { language } = useLanguageContext();
   const screenSize = useScreenSize();
   const { degreeTitle, timeSpan, status } = props;
 
@@ -46,13 +52,16 @@ const StudyCard = (props: StudyCardProps): JSX.Element => {
           unit: "px",
           bg: colorPattle.primaryColor,
         }}
-        title={"See certificate"}
+        title={language === "en-US" ? "See certificate" : "Ver certificado"}
         href={"#"}
       >
         <GrView style={{ color: "var(--white)", fontSize: 24 }} />
         {screenSize > 600 ? (
           <Text color="var(--white)" weight="bold" align="center">
-            See Certificate
+            <FormattedMessage
+              id="about.certificateButtonLabel"
+              defaultMessage="See Certificate"
+            />
           </Text>
         ) : null}
       </BaseExternalLink>

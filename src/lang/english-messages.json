@@ -11,5 +11,13 @@
   "about.title": "Let’s know a little more about me",
   "about.profile-1": "I’m a front-end developer and an UI/UX design lover. For front-end development I have experience developing personal, academic projects and projects as a freelancer in certain technologies such as React + TypeScript, React native and much more. For UI design I have experience with Figma tool.",
   "about.profile-2": "Finally, to describe myself I’m a self-learner and I like learning new things every day to keep growing both personally and professionally as well as to keep up with new emerging technologies.",
-  "about.subtitle": "About me"
+  "about.subtitle": "About me",
+  "about.skillSubtitle": "My technical skills",
+  "about.experienceSubtitle": "My experience",
+  "about.experienceOneTitle": "Front - end developer",
+  "about.experienceTwoTitle": "Front - end developer and UI/UX designer",
+  "about.experienceOneDescription": "I worked in this project as a freelancer front-end developer for individual clients during 6 months in 2023. I collaborated with a working team that was composed of 3 persons a product owner, backend developer and me. It was about an electronic bingo game application.",
+  "about.experienceTwoDescription": "I developed this project as a software engineer student for getting my degree in engineering. This project lasted 6 months. I collaborated with a development team that was composed of 4 persons two project directors, and two developers. It was about a mobile app for android system to make easier the production’s costs and expenses management of coffee crops for coffee growers in Rosas Cauca Colombia town.",
+  "about.studiesTitle": "My studies and courses",
+  "about.certificateButtonLabel": "See Certificate"
 }
