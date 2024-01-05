@@ -3,6 +3,7 @@ import { FormattedMessage } from "react-intl";
 import { IoMdDownload } from "react-icons/io";
 
 import { useLanguageContext, useThemeContext } from "@hooks/index";
+import { downloadCV } from "@utils/index";
 
 import { ButtonWithLabel, ProfilePhoto, Proffession } from "@components/index";
 
@@ -45,7 +46,7 @@ const Presentation = (): JSX.Element => {
           label={language === "en-US" ? "Download CV" : "Descargar CV"}
           style={getCvButtonStyle(colorPattle)}
           title={language === "en-US" ? "Download CV" : "Descargar CV"}
-          onClick={() => console.log("Download")}
+          onClick={() => downloadCV(language)}
         >
           <IoMdDownload style={{ color: "var(--white)", fontSize: 30 }} />
         </ButtonWithLabel>

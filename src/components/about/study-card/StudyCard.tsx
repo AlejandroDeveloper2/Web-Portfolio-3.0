@@ -18,7 +18,7 @@ const StudyCard = (props: StudyCardProps): JSX.Element => {
   const { colorPattle } = useThemeContext();
   const { language } = useLanguageContext();
   const screenSize = useScreenSize();
-  const { degreeTitle, timeSpan, status } = props;
+  const { degreeTitle, timeSpan, status, degreeImageUrl } = props;
 
   return (
     <StudyCardContainer bg={colorPattle.primaryColor}>
@@ -53,7 +53,7 @@ const StudyCard = (props: StudyCardProps): JSX.Element => {
           bg: colorPattle.primaryColor,
         }}
         title={language === "en-US" ? "See certificate" : "Ver certificado"}
-        href={"#"}
+        href={degreeImageUrl}
       >
         <GrView style={{ color: "var(--white)", fontSize: 24 }} />
         {screenSize > 600 ? (
