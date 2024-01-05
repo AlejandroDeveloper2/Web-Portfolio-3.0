@@ -1,7 +1,7 @@
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 import { CarouselProps } from "@models/ComponentsModels";
-import { useThemeContext } from "@hooks/index";
+import { useScreenSize, useThemeContext } from "@hooks/index";
 
 import { ButtonBase } from "@components/index";
 
@@ -24,6 +24,7 @@ const Carousel = (props: CarouselProps): JSX.Element => {
     goBack,
   } = props;
   const { colorPattle } = useThemeContext();
+  const screenSize = useScreenSize();
 
   return (
     <CarouselContainer bg={colorPattle.primaryColor}>
@@ -32,14 +33,19 @@ const Carousel = (props: CarouselProps): JSX.Element => {
         <ButtonBase
           style={{
             bg: colorPattle.primaryColor,
-            width: 50,
-            height: 50,
+            width: screenSize < 600 ? 40 : 50,
+            height: screenSize < 600 ? 40 : 50,
             unit: "px",
           }}
           title=""
           onClick={goBack}
         >
-          <IoIosArrowBack style={{ color: "var(--white)", fontSize: 30 }} />
+          <IoIosArrowBack
+            style={{
+              color: "var(--white)",
+              fontSize: screenSize < 600 ? 24 : 30,
+            }}
+          />
         </ButtonBase>
         <CarouselIndicators>
           {Array(indicatorsNumber)
@@ -56,14 +62,19 @@ const Carousel = (props: CarouselProps): JSX.Element => {
         <ButtonBase
           style={{
             bg: colorPattle.primaryColor,
-            width: 50,
-            height: 50,
+            width: screenSize < 600 ? 40 : 50,
+            height: screenSize < 600 ? 40 : 50,
             unit: "px",
           }}
           title=""
           onClick={next}
         >
-          <IoIosArrowForward style={{ color: "var(--white)", fontSize: 30 }} />
+          <IoIosArrowForward
+            style={{
+              color: "var(--white)",
+              fontSize: screenSize < 600 ? 24 : 30,
+            }}
+          />
         </ButtonBase>
       </CarouselControls>
     </CarouselContainer>
