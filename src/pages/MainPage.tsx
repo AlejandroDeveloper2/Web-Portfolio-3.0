@@ -1,11 +1,7 @@
 import { motion } from "framer-motion";
 import { BiSolidChevronDown } from "react-icons/bi";
 
-import {
-  useLanguageContext,
-  useScreenSize,
-  useThemeContext,
-} from "@hooks/index";
+import { useLanguageContext, useThemeContext } from "@hooks/index";
 
 import { ButtonBase, Presentation, Profile } from "@components/index";
 
@@ -16,19 +12,11 @@ import { FirstFigure, SecondFigure } from "@assets/index";
 const MainPage = (): JSX.Element => {
   const { colorPattle } = useThemeContext();
   const { language } = useLanguageContext();
-  const screenSize = useScreenSize();
 
   return (
     <>
       {/* Home Section */}
-      <PageContainer
-        id="Home"
-        className="section"
-        style={{
-          height:
-            screenSize < 600 ? "calc(100vh - 6.25rem)" : "calc(100vh - 7.5rem)",
-        }}
-      >
+      <PageContainer id="Home" className="section">
         <FirstFigure />
         <SecondFigure />
         <Presentation />

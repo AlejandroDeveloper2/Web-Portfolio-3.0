@@ -1,14 +1,12 @@
-import { Location } from "react-router-dom";
-
 import { ColorPattle } from "@models/ContextModels";
 import { ActiveBgStyle, Theme } from "@models/StyledComponentsModels";
 
 export const getActiveItemBg = (
   to: string,
   colorPattle: ColorPattle,
-  location: Location
+  sectionName: string
 ): string => {
-  const currentPath = location.hash;
+  const currentPath = sectionName;
   const activeBg =
     to === currentPath ? colorPattle.primaryColor : colorPattle.secondaryColor;
   return activeBg;

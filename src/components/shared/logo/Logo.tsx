@@ -14,7 +14,7 @@ import {
 const BaseLogo = ({ children }: LogoProps): JSX.Element => {
   const { colorPattle } = useThemeContext();
   return (
-    <LogoContainer to="/">
+    <LogoContainer href="/#Home">
       <LogoText color={colorPattle.primaryColor} weight="bold" align="center">
         {"<Diego"}
       </LogoText>

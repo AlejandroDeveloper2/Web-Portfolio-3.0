@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 import {
   BackgroundStyledProps,
@@ -8,7 +7,7 @@ import {
 
 import { textStyle } from "@styles/GlobalStyles.style";
 
-const LogoContainer = styled(Link)`
+const LogoContainer = styled.a`
   display: inline-flex;
   justify-content: center;
   align-items: center;

@@ -1,4 +1,4 @@
-import { Outlet, useLocation } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { IntlProvider } from "react-intl";
 import { BiSolidChevronUp } from "react-icons/bi";
 
@@ -24,9 +24,8 @@ import {
 const Layout = (): JSX.Element => {
   const { colorPattle } = useThemeContext();
   const { language, appMessages } = useLanguageContext();
-  const sectionsRef = useIntersectionObserver();
+  const { sectionsRef, sectionName } = useIntersectionObserver();
   const screenSize = useScreenSize();
-  const location = useLocation();
 
   return (
     <IntlProvider
@@ -39,7 +38,7 @@ const Layout = (): JSX.Element => {
         <ParticlesBg />
         <MediaLinks />
         <Outlet />
-        {location.hash === "#Home" ? null : (
+        {sectionName === "#Home" ? null : (
           <FloatButtonContainer>
             <ButtonBase
               style={{

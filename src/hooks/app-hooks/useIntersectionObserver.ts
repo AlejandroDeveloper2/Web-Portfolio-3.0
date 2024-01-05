@@ -1,12 +1,19 @@
-import { useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const useIntersectionObserver = () => {
+  const [sectionName, setSectionName] = useState<string>("#Home");
   const sectionsRef = useRef<HTMLElement>(null);
+
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          window.location.assign(getSectionName(entry.target.id));
+          window.history.replaceState(
+            getSectionName(entry.target.id),
+            "",
+            getSectionName(entry.target.id)
+          );
+          setSectionName(window.history.state);
         }
       });
     },
@@ -37,7 +44,7 @@ const useIntersectionObserver = () => {
     return sectionName;
   };
 
-  return sectionsRef;
+  return { sectionsRef, sectionName };
 };
 
 export default useIntersectionObserver;
