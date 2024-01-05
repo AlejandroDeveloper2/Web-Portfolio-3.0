@@ -4,7 +4,7 @@ import { BackgroundStyledProps } from "@models/StyledComponentsModels";
 
 const StudyCardContainer = styled.div<BackgroundStyledProps>`
   width: 11.25rem;
-  height: 11.25rem;
+  height: auto;
   padding: 1.25rem 0.9rem;
   border-radius: 20px;
   border: solid 2px ${({ bg }: BackgroundStyledProps) => bg};

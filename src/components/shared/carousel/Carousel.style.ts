@@ -8,7 +8,7 @@ import {
 
 const CarouselContainer = styled.div<BackgroundStyledProps>`
   width: 100%;
-  height: 18.75rem;
+  height: 22rem;
   border: solid 4px ${({ bg }: BackgroundStyledProps) => bg};
   border-radius: 20px;
   position: relative;
