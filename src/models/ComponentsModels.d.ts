@@ -73,7 +73,11 @@ interface StudyCardProps {
 interface CarouselProps {
   children: ReactNode[] | ReactNode;
   indicatorsNumber: number;
+  slidesHorizontalPosition: number;
+  currentSlideIndex: number;
+  toggleCarousel: (activeIndex: number) => void;
   next: () => void;
+  goBack: () => void;
 }
 
 export type {

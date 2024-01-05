@@ -13,13 +13,6 @@ const ParticlesBg = (): JSX.Element => {
     await loadSlim(engine);
   }, []);
 
-  // const particlesLoaded = useCallback(
-  //   async (container: Container | undefined) => {
-  //     console.log(container);
-  //   },
-  //   []
-  // );
-
   return (
     <Particles
       id="tsparticles"

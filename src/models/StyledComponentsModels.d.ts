@@ -44,6 +44,10 @@ interface CarouselIndicatorStyleProps extends BackgroundStyledProps {
   active: boolean;
 }
 
+interface SlidesStyleProps {
+  left: number;
+}
+
 export type {
   Theme,
   ScreenMode,
@@ -57,4 +61,5 @@ export type {
   ActiveBgStyle,
   MediaLinksStyleProps,
   CarouselIndicatorStyleProps,
+  SlidesStyleProps,
 };

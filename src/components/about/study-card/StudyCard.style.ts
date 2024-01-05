@@ -15,9 +15,6 @@ const StudyCardContainer = styled.div<BackgroundStyledProps>`
   position: relative;
   gap: 10px;
   transition: transform 0.6s ease;
-  &:hover {
-    transform: scale(1.1);
-  }
 
   div {
     position: absolute;
@@ -29,6 +26,12 @@ const StudyCardContainer = styled.div<BackgroundStyledProps>`
     width: 15.625rem;
     height: 15.625rem;
     gap: 15px;
+  }
+
+  @media (min-width: 1400px) {
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 `;
 

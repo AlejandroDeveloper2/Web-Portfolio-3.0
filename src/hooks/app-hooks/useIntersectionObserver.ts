@@ -1,8 +1,11 @@
 import { useState, useEffect, useRef } from "react";
 
+import { useScreenSize } from "..";
+
 const useIntersectionObserver = () => {
   const [sectionName, setSectionName] = useState<string>("#Home");
   const sectionsRef = useRef<HTMLElement>(null);
+  const screenSize = useScreenSize();
 
   const observer = new IntersectionObserver(
     (entries) => {
@@ -17,7 +20,10 @@ const useIntersectionObserver = () => {
         }
       });
     },
-    { rootMargin: "-120px 0px 0px 0px", threshold: 0.4 }
+    {
+      rootMargin: `${screenSize < 600 ? "-100px" : "-120px"} 0px 0px 0px`,
+      threshold: screenSize < 600 ? 0.3 : 0.4,
+    }
   );
   const sections = sectionsRef.current?.querySelectorAll(".section");
 

@@ -3,22 +3,32 @@ import styled from "styled-components";
 import {
   BackgroundStyledProps,
   CarouselIndicatorStyleProps,
+  SlidesStyleProps,
 } from "@models/StyledComponentsModels";
 
 const CarouselContainer = styled.div<BackgroundStyledProps>`
   width: 100%;
+  height: 18.75rem;
   border: solid 4px ${({ bg }: BackgroundStyledProps) => bg};
-  padding-top: 2.5rem;
-  padding-bottom: 3.125rem;
-  padding-left: 1.875rem;
-  padding-right: 1.875rem;
   border-radius: 20px;
-  overflow-x: hidden;
   position: relative;
+  display: block;
+  overflow-x: hidden;
+
+  @media (min-width: 768px) {
+    height: 23.75rem;
+  }
+`;
+
+const Slides = styled.div<SlidesStyleProps>`
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 1.5rem;
+  left: ${({ left }: SlidesStyleProps) => left}rem;
   display: inline-flex;
-  justify-content: center;
-  align-items: center;
   gap: 0.9rem;
+  transition: all 0.6s ease;
 `;
 
 const CarouselIndicators = styled.div`
@@ -39,7 +49,7 @@ const Indicator = styled.button<CarouselIndicatorStyleProps>`
   transition: all ease 0.6s;
   transform: scale(
     ${({ active }: CarouselIndicatorStyleProps) =>
-      String(active) === "true" ? 1.2 : 1}
+      String(active) === "true" ? 1.3 : 1}
   );
   border-radius: 50%;
   background-color: ${({ bg }: CarouselIndicatorStyleProps) => bg};
@@ -50,4 +60,21 @@ const Indicator = styled.button<CarouselIndicatorStyleProps>`
   }
 `;
 
-export { CarouselContainer, CarouselIndicators, Indicator };
+const CarouselControls = styled.div`
+  width: 100%;
+  padding: 0 1.875rem;
+  position: absolute;
+  bottom: 1.25rem;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  left: 0;
+`;
+
+export {
+  CarouselContainer,
+  Slides,
+  CarouselIndicators,
+  Indicator,
+  CarouselControls,
+};
