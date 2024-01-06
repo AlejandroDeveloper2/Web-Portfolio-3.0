@@ -24,7 +24,7 @@ export const getActiveButtonBg = (
 };
 
 export const downloadCV = async (language: LanguageTag): Promise<void> => {
-  const hostUrl: string = "http://localhost:5173/download/";
+  const hostUrl: string = import.meta.env.PRODUCTION_WEBSITE_URL + "download/";
   const cvFileURl: string =
     language === "en-US"
       ? hostUrl + "CV-ingles.pdf"
