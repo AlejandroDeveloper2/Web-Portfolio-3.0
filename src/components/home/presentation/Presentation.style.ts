@@ -5,7 +5,7 @@ import { ColorPattle } from "@models/ContextModels";
 import { Image } from "@styles/GlobalStyles.style";
 
 const PresentationContainer = styled.section`
-  width: calc(100vw - 7.5rem);
+  width: 18.75rem;
   display: flex;
   flex-direction: column;
   gap: 15px;

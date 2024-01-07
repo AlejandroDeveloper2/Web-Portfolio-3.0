@@ -42,12 +42,16 @@ const List = styled.ul`
   width: auto;
   display: inline-flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   gap: 0.5rem;
   li {
     list-style: none;
     display: block;
+  }
+
+  @media (min-width: 768px) {
+    justify-content: flex-start;
   }
 `;
 

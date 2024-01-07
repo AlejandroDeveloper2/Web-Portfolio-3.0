@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const ProfileContainer = styled.section`
-  width: calc(100vw - 7.5rem);
+  width: 18.75rem;
   display: flex;
   flex-direction: column;
   gap: 15px;
