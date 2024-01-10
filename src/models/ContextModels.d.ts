@@ -1,5 +1,11 @@
 import { MessageFormatElement } from "react-intl";
-import { LanguageTag } from "./DataModels";
+
+import {
+  LanguageTag,
+  Project,
+  LanguageLabel,
+  ProjectCategory,
+} from "./DataModels";
 import { Theme } from "./StyledComponentsModels";
 
 interface ContextProps {
@@ -27,9 +33,24 @@ interface LanguageContextModel {
   toggleAppLanguage: () => void;
 }
 
+interface StoreDataModel {
+  projects: Project[];
+  allProjects: Project[];
+  projectTap: ProjectCategory;
+  getAllProjects: (lang: LanguageLabel) => Promise<void>;
+  toggleProjectTap: () => void;
+}
+
+interface CounterProject {
+  designCounter: number;
+  developmentCounter: number;
+}
+
 export type {
   ContextProps,
   ThemeContextModel,
   ColorPattle,
   LanguageContextModel,
+  StoreDataModel,
+  CounterProject,
 };

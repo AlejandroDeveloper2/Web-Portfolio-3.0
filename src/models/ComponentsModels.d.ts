@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-import { MenuItem, SkillInfo } from "./DataModels";
+import { MenuItem, SkillInfo, StudyStatus, WorkStatus } from "./DataModels";
 import { ButtonStyleProps, ButtonStyleVariant } from "./StyledComponentsModels";
 
 interface LogoProps {
@@ -52,7 +52,7 @@ interface ExperienceInfoProps {
   description: string;
   timeDuration: string;
   jobPosition: string;
-  state: "ended" | "working" | "finalizado" | "trabajando";
+  state: WorkStatus;
 }
 
 interface BadgeProps {
@@ -66,7 +66,7 @@ interface BadgeProps {
 interface StudyCardProps {
   degreeTitle: string;
   timeSpan: string;
-  status: "ended" | "studying" | "finalizado" | "estudiando";
+  status: StudyStatus;
   degreeImageUrl: string;
 }
 

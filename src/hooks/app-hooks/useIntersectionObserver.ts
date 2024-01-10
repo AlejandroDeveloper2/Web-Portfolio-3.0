@@ -1,11 +1,14 @@
 import { useState, useEffect, useRef } from "react";
 
-import { useScreenSize } from "..";
+import { useLanguageContext, useScreenSize } from "..";
+import usePortfolioStore from "@zustands/usePortfolioStore";
 
 const useIntersectionObserver = () => {
   const [sectionName, setSectionName] = useState<string>("#Home");
   const sectionsRef = useRef<HTMLElement>(null);
+  const { getAllProjects, projectTap } = usePortfolioStore();
   const screenSize = useScreenSize();
+  const { language } = useLanguageContext();
 
   const observer = new IntersectionObserver(
     (entries) => {
@@ -39,6 +42,13 @@ const useIntersectionObserver = () => {
     observeSection();
     return () => unobserveSection();
   });
+
+  useEffect(() => {
+    const modLangTag: "spanish" | "english" =
+      language === "en-US" ? "english" : "spanish";
+    if (sectionName === "#MyProjects") getAllProjects(modLangTag);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [sectionName, language, projectTap]);
 
   const getSectionName = (sectionId: string): string => {
     const sectionName: string =

@@ -1,5 +1,5 @@
-import { ColorPattle } from "@models/ContextModels";
-import { LanguageTag } from "@models/DataModels";
+import { ColorPattle, CounterProject } from "@models/ContextModels";
+import { LanguageTag, Project } from "@models/DataModels";
 import { ActiveBgStyle, Theme } from "@models/StyledComponentsModels";
 
 export const getActiveItemBg = (
@@ -42,4 +42,16 @@ export const downloadCV = async (language: LanguageTag): Promise<void> => {
   } catch (error) {
     console.log(error);
   }
+};
+
+export const getProjectsQuantityPerCategory = (
+  projects: Project[]
+): CounterProject => {
+  let designCounter = 0,
+    developmentCounter = 0;
+  projects.forEach((project: Project) => {
+    if (project.category === "design") designCounter++;
+    else developmentCounter++;
+  });
+  return { designCounter, developmentCounter };
 };

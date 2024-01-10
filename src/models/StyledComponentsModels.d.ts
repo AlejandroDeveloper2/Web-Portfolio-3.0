@@ -48,6 +48,10 @@ interface SlidesStyleProps {
   left: number;
 }
 
+interface TapStyleProps extends BackgroundStyledProps {
+  active: string;
+}
+
 export type {
   Theme,
   ScreenMode,
@@ -62,4 +66,5 @@ export type {
   MediaLinksStyleProps,
   CarouselIndicatorStyleProps,
   SlidesStyleProps,
+  TapStyleProps,
 };

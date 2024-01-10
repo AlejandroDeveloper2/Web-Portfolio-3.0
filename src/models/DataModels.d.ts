@@ -1,8 +1,14 @@
 import { IconType } from "react-icons";
 import { ButtonStyleProps } from "./StyledComponentsModels";
 import { StudyCardProps } from "./ComponentsModels";
+import { CounterProject } from "./ContextModels";
 
 type LanguageTag = "es-MX" | "en-US";
+type LanguageLabel = "spanish" | "english";
+type ProjectStatus = "ended" | "in progress" | "finalizado" | "en progreso";
+type ProjectCategory = "design" | "development";
+type StudyStatus = "ended" | "studying" | "finalizado" | "estudiando";
+type WorkStatus = "ended" | "working" | "finalizado" | "trabajando";
 
 interface MenuItem {
   to: string;
@@ -38,11 +44,50 @@ interface CarouselConfig {
   slides: T[];
 }
 
+interface Technologie {
+  name: string;
+  skillId: string;
+}
+
+interface Project {
+  id: string;
+  name: string;
+  category: ProjectCategory;
+  codeUrl: string;
+  demoUrl: string;
+  designUrl: string;
+  description: string;
+  language: LanguageLabel;
+  presentationImage: string;
+  status: ProjectStatus;
+  technologies: Technologie[];
+}
+
+interface ServerResponseError {
+  message: string;
+}
+
+interface ProjectTap {
+  label: string;
+  category: ProjectCategory;
+  Icon: IconType;
+  projectsQuantity: CounterProject;
+}
+
 export type {
   LanguageTag,
+  LanguageLabel,
+  ProjectStatus,
+  ProjectCategory,
+  StudyStatus,
+  WorkStatus,
   MenuItem,
   SkillInfo,
   MediaLink,
   StudiesInfo,
   CarouselConfig,
+  Technologie,
+  Project,
+  ServerResponseError,
+  ProjectTap,
 };

@@ -36,7 +36,7 @@ export default defineConfig({
       { find: "@utils", replacement: "/src/utils" },
       { find: "@models", replacement: "/src/models" },
       { find: "@services", replacement: "/src/services" },
-      { find: "@redux", replacement: "/src/redux" },
+      { find: "@zustands", replacement: "/src/zustands" },
       { find: "@context", replacement: "/src/context" },
       { find: "@config", replacement: "/src/config" },
       { find: "@layout", replacement: "/src/layout" },

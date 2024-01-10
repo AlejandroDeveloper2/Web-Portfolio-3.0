@@ -27,3 +27,7 @@ export { default as Experience } from "@components/about/experience/Experience";
 export { default as ExperienceInfo } from "@components/about/experience-info/ExperienceInfo";
 export { default as Studies } from "@components/about/studies/Studies";
 export { default as StudyCard } from "@components/about/study-card/StudyCard";
+
+/*projects */
+export { default as Projects } from "@components/my-projects/projects/Projects";
+export { default as ProjectsNav } from "@components/my-projects/projects-nav/ProjectsNav";

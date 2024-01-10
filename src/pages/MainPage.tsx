@@ -1,17 +1,20 @@
+import { Suspense } from "react";
 import { motion } from "framer-motion";
 import { BiSolidChevronDown } from "react-icons/bi";
 
 import { useLanguageContext, useThemeContext } from "@hooks/index";
+import usePortfolioStore from "@zustands/usePortfolioStore";
 
-import { ButtonBase, Presentation, Profile } from "@components/index";
+import { ButtonBase, Presentation, Profile, Projects } from "@components/index";
 
 import { PageContainer } from "@styles/GlobalStyles.style";
 
-import { FirstFigure, SecondFigure } from "@assets/index";
+import { FirstFigure, ProjectIllustration, SecondFigure } from "@assets/index";
 
 const MainPage = (): JSX.Element => {
   const { colorPattle } = useThemeContext();
   const { language } = useLanguageContext();
+  const { projects } = usePortfolioStore();
 
   return (
     <>
@@ -48,7 +51,13 @@ const MainPage = (): JSX.Element => {
 
       {/* My Projects Section */}
       <PageContainer id="MyProjects" className="section">
-        <h1>Mis proyectos</h1>
+        <ProjectIllustration />
+        <Projects />
+        <Suspense fallback={<h2>Cargando...</h2>}>
+          {projects.map((project) => (
+            <div key={project.id}>{project.name}</div>
+          ))}
+        </Suspense>
       </PageContainer>
     </>
   );

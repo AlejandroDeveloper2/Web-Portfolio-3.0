@@ -10,3 +10,4 @@ export { default as IconTap } from "./icons/logo_tap.svg";
 
 export { default as FirstFigure } from "./svgs/FirstFigure";
 export { default as SecondFigure } from "./svgs/SecondFigure";
+export { default as ProjectIllustration } from "./svgs/ProjectIllustration";

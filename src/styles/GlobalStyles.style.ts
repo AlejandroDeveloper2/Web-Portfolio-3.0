@@ -92,11 +92,28 @@ const PageContainer = styled.div`
   position: relative;
   padding: 20px 0;
   overflow-x: hidden;
+  svg[id="projectillustration"] {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    display: none;
+  }
   @media (min-height: 800px) {
     gap: 7rem;
   }
   @media (min-width: 768px) {
     padding: 40px 0;
+    svg[id="projectillustration"] {
+      display: block;
+      width: 6.25rem;
+      height: 6.25rem;
+    }
+  }
+  @media (min-width: 1400px) {
+    svg[id="projectillustration"] {
+      width: 8.75rem;
+      height: 8.75rem;
+    }
   }
 `;
 

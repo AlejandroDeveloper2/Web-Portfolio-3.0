@@ -24,7 +24,7 @@
       "@styles/*":["./styles/*"],
       "@models/*":["./models/*"],
       "@pages/*":["./pages/*"],
-      "@redux/*":["./redux/*"],
+      "@zustands/*":["./zustands/*"],
       "@context/*":["./context/*"],
       "@config/*":["./config/*"],
       "@routes/*":["./routes/*"],
