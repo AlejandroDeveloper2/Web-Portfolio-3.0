@@ -34,7 +34,7 @@ const NavigationContainer = styled.header<BackgroundStyledProps>`
   padding: 1.5rem 1rem;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  z-index: 5;
+  z-index: 10;
   @media (min-width: 1400px) {
     height: 7.5rem;
   }

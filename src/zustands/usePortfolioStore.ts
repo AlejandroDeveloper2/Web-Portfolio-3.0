@@ -8,7 +8,9 @@ const usePortfolioStore = create<StoreDataModel>((set, get) => ({
   projects: [],
   projectTap: "design",
   allProjects: [],
+  isLoading: false,
   getAllProjects: async (lang: LanguageLabel) => {
+    set({ isLoading: true });
     try {
       const projects = await getAllProjects();
       const filteredAllProjects = projects.filter(
@@ -25,6 +27,8 @@ const usePortfolioStore = create<StoreDataModel>((set, get) => ({
     } catch (error: unknown) {
       const parsedError = error as ServerResponseError;
       console.log(parsedError.message);
+    } finally {
+      set({ isLoading: false });
     }
   },
   toggleProjectTap: () => {

@@ -37,6 +37,7 @@ interface StoreDataModel {
   projects: Project[];
   allProjects: Project[];
   projectTap: ProjectCategory;
+  isLoading: boolean;
   getAllProjects: (lang: LanguageLabel) => Promise<void>;
   toggleProjectTap: () => void;
 }

@@ -2,6 +2,7 @@ import {
   BaseButtonProps,
   BaseExternalLinkProps,
   ButtonWithLabelProps,
+  ExternalLinkWithLabelProps,
 } from "@models/ComponentsModels";
 
 import { Button, ExternalLink } from "./CustomButton.style";
@@ -31,7 +32,7 @@ const ButtonWithLabel = (props: ButtonWithLabelProps): JSX.Element => {
   return (
     <ButtonBase style={style} title={title} onClick={onClick}>
       {children}
-      <Text color={color} weight="normal" align="center">
+      <Text color={color} weight="bold" align="center">
         {label}
       </Text>
     </ButtonBase>
@@ -58,5 +59,21 @@ const BaseExternalLink = (props: BaseExternalLinkProps): JSX.Element => {
   );
 };
 
-export { ButtonWithLabel, BaseExternalLink };
+const ExternalLinkWithLabel = (
+  props: ExternalLinkWithLabelProps
+): JSX.Element => {
+  const { children, style, title, href, label } = props;
+  const { color } = style;
+
+  return (
+    <BaseExternalLink style={style} title={title} href={href}>
+      {children}
+      <Text color={color} weight="bold" align="center">
+        {label}
+      </Text>
+    </BaseExternalLink>
+  );
+};
+
+export { ButtonWithLabel, BaseExternalLink, ExternalLinkWithLabel };
 export default ButtonBase;

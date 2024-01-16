@@ -23,7 +23,7 @@ const LateralMenuContainer = styled.div<LateralMenuStyleProps>`
   background-color: ${({ bg }: LateralMenuStyleProps) => bg};
   transform: ${({ visible }: LateralMenuStyleProps) =>
     visible === "true" ? "translateX(0)" : "translateX(-100%)"};
-  z-index: 10;
+  z-index: 15;
   overflow: hidden;
 
   @media (min-width: 768px) {

@@ -1,6 +1,15 @@
 import { ReactNode } from "react";
+import { IconType } from "react-icons";
 
-import { MenuItem, SkillInfo, StudyStatus, WorkStatus } from "./DataModels";
+import {
+  MenuItem,
+  SkillInfo,
+  StudyStatus,
+  WorkStatus,
+  Project,
+  ProjectStatus,
+  ProjectCategory,
+} from "./DataModels";
 import { ButtonStyleProps, ButtonStyleVariant } from "./StyledComponentsModels";
 
 interface LogoProps {
@@ -24,6 +33,11 @@ interface BaseExternalLinkProps {
   style: ButtonStyleProps;
   title: string;
   href: string;
+}
+
+interface ExternalLinkWithLabelProps extends BaseExternalLinkProps {
+  label: string;
+  style: ButtonStyleVariant;
 }
 
 interface LateralMenuProps {
@@ -61,6 +75,19 @@ interface BadgeProps {
     bg: string;
     color: string;
   };
+  children?: ReactNode | ReactNode[];
+}
+
+interface BadgeWithIconProps extends BadgeProps {
+  Icon: IconType;
+}
+
+interface BadgeIconOnlyProps {
+  Icon: IconType;
+  style: {
+    bg: string;
+    color: string;
+  };
 }
 
 interface StudyCardProps {
@@ -80,11 +107,28 @@ interface CarouselProps {
   goBack: () => void;
 }
 
+interface ProjectCardProps extends Project {}
+
+interface ProjectBadgesProps {
+  category: ProjectCategory;
+  status: ProjectStatus;
+}
+
+interface ProjectDescriptionProps {
+  description: string;
+}
+
+interface ProjectCardOptionsProps {
+  codeUrl: string;
+  category: ProjectCategory;
+}
+
 export type {
   LogoProps,
   BaseButtonProps,
   ButtonWithLabelProps,
   BaseExternalLinkProps,
+  ExternalLinkWithLabelProps,
   LateralMenuProps,
   ThemeControlsProps,
   NavItemProps,
@@ -92,6 +136,12 @@ export type {
   SkillListProps,
   ExperienceInfoProps,
   BadgeProps,
+  BadgeWithIconProps,
+  BadgeIconOnlyProps,
   StudyCardProps,
   CarouselProps,
+  ProjectCardProps,
+  ProjectBadgesProps,
+  ProjectDescriptionProps,
+  ProjectCardOptionsProps,
 };

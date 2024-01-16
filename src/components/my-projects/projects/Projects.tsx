@@ -1,8 +1,9 @@
 import { IoIosRocket } from "react-icons/io";
 
 import { useThemeContext } from "@hooks/index";
+import usePortfolioStore from "@zustands/usePortfolioStore";
 
-import { ProjectsNav } from "@components/index";
+import { LoaderBar, ProjectList, ProjectsNav } from "@components/index";
 
 import { TextSubtitle, TextTitle } from "@styles/GlobalStyles.style";
 import {
@@ -13,6 +14,7 @@ import {
 
 const Projects = (): JSX.Element => {
   const { colorPattle } = useThemeContext();
+  const { isLoading } = usePortfolioStore();
 
   return (
     <ProjectsContainer>
@@ -37,6 +39,7 @@ const Projects = (): JSX.Element => {
           </TextSubtitle>
         </SubtitleContainer>
         <ProjectsNav />
+        {isLoading ? <LoaderBar /> : <ProjectList />}
       </ProjectInfo>
     </ProjectsContainer>
   );
